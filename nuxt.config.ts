@@ -9,4 +9,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: ['shadcn-nuxt', '@nuxtjs/tailwindcss'],
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui'
+  }
 })
