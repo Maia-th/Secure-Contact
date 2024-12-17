@@ -36,6 +36,8 @@ cd Secure-Contact
 
 ### Suba o banco de dados:
 
+> Consulte a documentação em: [Banco de Dados](.github/docs/bancoDeDados.md).
+
 1. Crie o banco de dados:
 
 ```sql
