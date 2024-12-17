@@ -2,9 +2,11 @@
 
 ## Diagrama ER
 
+- ⚠️ Em Breve!
+
 ## Dicionário de Dados
 
-### **Entidade: Usuários**
+### Tabela: **Usuarios**
 
 | Campo           | Tipo                  | Descrição                       | Restrições                  |
 | --------------- | --------------------- | ------------------------------- | --------------------------- |
@@ -17,7 +19,7 @@
 
 ---
 
-### **Entidade: Números Bloqueados**
+### Tabela: **Numeros_Bloqueados**
 
 | Campo      | Tipo        | Descrição                                  | Restrições                  |
 | ---------- | ----------- | ------------------------------------------ | --------------------------- |
