@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Secure Contact - Sistema de Bloqueio de Números
 
-## Getting Started
+## Descrição do Sistema
 
-First, run the development server:
+O Secure Contact é um sistema desenvolvido para resolver problemas de banimento de números de WhatsApp devido ao envio repetido de mensagens. O sistema oferece as seguintes funcionalidades principais:
+
+### Funcionalidades
+
+- **Armazenamento de Números Bloqueados:** Todos os números bloqueados são armazenados em um banco de dados centralizado, garantindo que a lista negra esteja sempre atualizada e acessível.
+
+- **Interface Gráfica Web:** Usuários podem consultar, cadastrar e descartar números bloqueados através de uma interface intuitiva e fácil de usar.
+
+- **Automação do Bloqueio:** O sistema automatiza o processo de bloqueio de números, evitando que o disparador de mensagens entre em contato com números previamente bloqueados.
+
+- **Geração de Listas Válidas:** O sistema permite a geração de listas de contatos válidos, excluindo automaticamente os números bloqueados, garantindo que apenas números permitidos sejam contatados.
+
+- **Gestão de Usuários:** Funcionalidades de gestão de usuários garantem que apenas pessoas autorizadas possam acessar e modificar a lista de números bloqueados, proporcionando maior segurança e controle.
+
+Com essas funcionalidades, o Secure Contact proporciona uma solução eficiente e automatizada para a gestão de números bloqueados, reduzindo o risco de banimentos e melhorando a organização e eficiência das operações de comunicação.
+
+## Requisitos do Ambiente
+
+Para rodar o projeto localmente, certifique-se de ter a seguinte ferramenta instalada:
+
+- Node.js >= 20.18.0
+- MySQL >= 8.x ou outro banco de dados compatível
+
+## Rode Localmente, com os seguintes passos:
+
+### Clone o repositório:
+
+```bash
+git clone https://github.com/Maia-th/Secure-Contact.git
+cd Secure-Contact
+```
+
+### Suba o banco de dados:
+
+> Consulte a documentação em: [Banco de Dados](.github/docs/bancoDeDados.md).
+
+1. Crie o banco de dados:
+
+```sql
+CREATE DATABASE SecureContact;
+```
+
+2. Importe o esquema do banco de dados:
+
+```bash
+mysql -u seu_usuario -p SecureContact < ./backup/SecureContact.sql
+```
+
+### Instale as dependências do projeto:
+
+```bash
+npm install
+```
+
+### Configure o arquivo .env:
+
+- Copie o arquivo `.env.example` e renomeie para `.env`:
+- Defina as variáveis de ambiente.
+
+### Inicie o projeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Bibliotecas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Axios - HTTP Client](https://axios-http.com/)
+- [Lucide - Icons](https://lucide.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
