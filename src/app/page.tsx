@@ -17,7 +17,7 @@ export default function Login() {
           alt="background"
           width={1920}
           height={1080}
-          className="md:w-7/12 md:absolute md:left-0 h-full object-cover object-left"
+          className="md:w-7/12 md:absolute md:left-0 h-full object-cover lg:object-left"
         />
       </div>
       <div className="w-full h-full md:w-6/12 md:absolute md:right-0 flex shadow-md items-center justify-center">
