@@ -19,14 +19,6 @@ export default function Login() {
           height={1080}
           className="md:w-7/12 md:absolute md:left-0 h-full object-cover object-left"
         />
-        {/* <div className="md:w-1/2 md:absolute md:left-0 flex justify-center">
-          <Image
-            src="/assets/images/rejected-white.png"
-            alt="rejected Icon"
-            width={300}
-            height={300}
-          />
-        </div> */}
       </div>
       <div className="w-full h-full md:w-6/12 md:absolute md:right-0 flex shadow-md items-center justify-center">
         <form className="bg-white p-8 md:rounded-l-3xl shadow-md w-full h-full flex flex-col justify-center">
