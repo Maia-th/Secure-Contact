@@ -31,7 +31,7 @@ const SideBar: React.FC = () => {
             height={30}
             className="mr-2"
           />
-          <h1 className="text-2xl font-bold">Secure Contact</h1>
+          <h1 className="text-2xl font-bold mr-2">Secure Contact</h1>
         </div>
         <ul className="flex flex-col items-center md:items-start">
           <li className="mb-4 flex items-center">
