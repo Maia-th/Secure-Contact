@@ -16,7 +16,6 @@ const BuscarNumeroPage: React.FC = () => {
     situacao: string;
   } | null>(null);
   const [mensagem, setMensagem] = useState("");
-  const [tipoBusca,setTipoBusca] = useState("aproximada")
 
   const validarPhone = () => {
     const regex = /^[0-9]+$/;
@@ -64,32 +63,7 @@ const BuscarNumeroPage: React.FC = () => {
           <Search className="text-gray-500" />
         </button>
       </div>
-
-        <div className="mb-3 flex items-center">
-          <label className="flex items-center cursor-pointer">
-            <input
-              type="radio"
-              name="tipoBusca"
-              value="aproximada"
-              checked={tipoBusca === "aproximada"}
-              onChange={() => setTipoBusca("aproximada")}
-              className="mr-2 cursor-pointer"
-            />
-            Busca Aproximada
-          </label>
-          <label className="ml-4 flex items-center cursor-pointer">
-            <input
-              type="radio"
-              name="tipoBusca"
-              value="exata"
-              checked={tipoBusca === "exata"}
-              onChange={() => setTipoBusca("exata")}
-              className="mr-2 cursor-pointer"
-            />
-            Busca Exata
-          </label>
-        </div>
-
+      
       {mensagem !== "" && (
         <div className="flex items-center text-red-500">
           <AlertCircle className="mr-2" />
