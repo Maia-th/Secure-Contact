@@ -88,15 +88,6 @@ const ManageNumbersPage: React.FC = () => {
     }
   };
 
-  const handleSearch = () => {
-    const error = validateNumber(search);
-    if (error && search) {
-      setSearchError(error);
-      return;
-    }
-    setSearchError(null);
-  };
-
   const clearSearch = () => {
     setSearch("");
     setSearchError(null);
@@ -242,13 +233,7 @@ const ManageNumbersPage: React.FC = () => {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
-        <button
-          type="button"
-          onClick={handleSearch}
-          className="ml-2 cursor-pointer"
-        >
-          <Search className="text-gray-500" />
-        </button>
+        <Search className="text-gray-500" />
       </div>
       {/* Mensagem de erro busca */}
       {searchError && (
@@ -276,7 +261,7 @@ const ManageNumbersPage: React.FC = () => {
           if (!open) resetAddDialog();
         }}>
           <DialogTrigger asChild>
-            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition cursor-pointer">
               <Plus className="w-5 h-5" /> Adicionar Número
             </button>
           </DialogTrigger>
@@ -349,7 +334,7 @@ const ManageNumbersPage: React.FC = () => {
           if (!open) resetListDialog();
         }}>
           <DialogTrigger asChild>
-            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition cursor-pointer">
               <ListPlus className="w-5 h-5" /> Adicionar Lista de Números
             </button>
           </DialogTrigger>
@@ -454,14 +439,14 @@ const ManageNumbersPage: React.FC = () => {
                       className="border rounded px-2 py-1 w-32 text-center"
                     />
                     <button
-                      className="text-green-600"
+                      className="text-green-600 cursor-pointer"
                       onClick={saveEdit}
                       type="button"
                     >
                       <CheckCircle2 className="w-5 h-5" />
                     </button>
                     <button
-                      className="text-gray-500"
+                      className="text-gray-500 cursor-pointer"
                       onClick={() => setEditingIdx(null)}
                       type="button"
                     >
@@ -477,7 +462,7 @@ const ManageNumbersPage: React.FC = () => {
               {/* Ações */}
               <span className="col-span-2 flex items-center justify-center gap-4">
                 <button
-                  className="text-gray-500 hover:text-red-600 transition"
+                  className="text-gray-500 hover:text-red-600 transition cursor-pointer"
                   onClick={() => startEdit(numbers.findIndex(n => n.number === item.number && n.blockedAt === item.blockedAt))}
                   title="Editar"
                   disabled={editingIdx !== null}
@@ -485,7 +470,7 @@ const ManageNumbersPage: React.FC = () => {
                   <Pencil className="w-5 h-5" />
                 </button>
                 <button
-                  className="text-gray-500 hover:text-red-600 transition"
+                  className="text-gray-500 hover:text-red-600 transition cursor-pointer"
                   onClick={() => handleDelete(numbers.findIndex(n => n.number === item.number && n.blockedAt === item.blockedAt))}
                   title="Remover"
                   disabled={editingIdx !== null}

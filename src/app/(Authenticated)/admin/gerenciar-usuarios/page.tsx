@@ -312,7 +312,7 @@ const ManageUsersPage: React.FC = () => {
           if (!open) resetAddDialog();
         }}>
           <DialogTrigger asChild>
-            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+            <button className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition cursor-pointer">
               <Plus className="w-5 h-5" /> Adicionar Usuário
             </button>
           </DialogTrigger>
@@ -451,14 +451,14 @@ const ManageUsersPage: React.FC = () => {
               <span className="col-span-2">{item.access === "admin" ? "Administrador" : "Usuário"}</span>
               <span className="col-span-2 flex items-center justify-center gap-4">
                 <button
-                  className="text-gray-500 hover:text-red-600 transition"
+                  className="text-gray-500 hover:text-red-600 transition cursor-pointer"
                   onClick={() => openEditDialog(users.findIndex(u => u.email === item.email))}
                   title="Editar"
                 >
                   <Pencil className="w-5 h-5" />
                 </button>
                 <button
-                  className="text-gray-500 hover:text-red-600 transition"
+                  className="text-gray-500 hover:text-red-600 transition cursor-pointer"
                   onClick={() => handleDelete(users.findIndex(u => u.email === item.email))}
                   title="Remover"
                 >
