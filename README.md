@@ -22,7 +22,7 @@ Com essas funcionalidades, o Secure Contact proporciona uma solução eficiente 
 
 - <a href="https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio" target="_blank">
   
-    ![image](https://github.com/user-attachments/assets/4341073f-92a7-4461-bfeb-3aa5ad2aece7)
+  [![Assista ao vídeo](https://github.com/user-attachments/assets/4341073f-92a7-4461-bfeb-3aa5ad2aece7)](https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio)
   </a>
 
 ## Requisitos do Ambiente
