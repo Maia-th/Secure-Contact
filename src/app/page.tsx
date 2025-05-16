@@ -10,10 +10,10 @@ export default function Login() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="flex bg-black h-dvh relative">
+    <div className="flex bg-[#E23424] h-dvh relative">
       <div className="hidden md:flex md:w-full items-center justify-center">
         <Image
-          src="/assets/images/bg.jpeg"
+          src="/images/bg.webp"
           alt="background"
           width={1920}
           height={1080}
@@ -24,7 +24,7 @@ export default function Login() {
         <form className="bg-white p-8 md:rounded-l-3xl shadow-md w-full h-full flex flex-col justify-center">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <Image
-              src="/assets/images/rejected.png"
+              src="/images/rejected.png"
               alt="Secure Contact Logo"
               width={40}
               height={40}
@@ -50,7 +50,7 @@ export default function Login() {
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="password"
             >
-              Password
+              Senha
             </label>
             <div className="relative">
               <input
@@ -78,7 +78,7 @@ export default function Login() {
               type="button"
               onClick={() => window.location.href = "/buscar-numero"}
             >
-              Sign In
+              Entrar
             </button>
           </div>
         </form>

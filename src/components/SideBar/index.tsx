@@ -17,7 +17,7 @@ const SideBar: React.FC = () => {
       <div className="bg-red-800 text-white h-screen px-12 py-24 hidden md:flex flex-col items-center justify-between md:items-start">
         <div className="flex items-center justify-center w-full">
           <Image
-            src="/assets/images/rejected-white.png"
+            src="/images/rejected-white.png"
             alt="logo"
             width={30}
             height={30}
