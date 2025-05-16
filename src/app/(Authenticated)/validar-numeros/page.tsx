@@ -34,6 +34,7 @@ const ValidateNumberPage: React.FC = () => {
   return (
     <>
       <div className="w-full max-w-[80%]">
+        <h1 className="text-2xl font-bold mb-6">Validar Números</h1>
         <label className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer hover:border-red-400 transition mb-6">
           <UploadCloud className="w-8 h-8 text-red-500 mb-2" />
           <span className="text-gray-700 font-medium mb-2">

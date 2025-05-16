@@ -50,6 +50,10 @@ const SearchNumberPage: React.FC = () => {
 
   return (
     <>
+    <div className="w-full max-w-[80%]">
+      <h1 className="text-2xl font-bold mb-6">Buscar Número</h1>
+    </div>
+    
       <div
         className={`mb-3 w-[80%] flex items-center border-b-2 transition-colors duration-200 ${
           isFocused ? "border-red-400" : "border-gray-300"
@@ -59,7 +63,7 @@ const SearchNumberPage: React.FC = () => {
           type="text"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
-          placeholder="Buscar número"
+          placeholder="Digite um Número"
           className="p-2 text-lg text-center w-full border-none outline-none rounded-lg"
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
@@ -78,7 +82,7 @@ const SearchNumberPage: React.FC = () => {
       {number && (
         <button
           onClick={() => clear()}
-          className="w-full flex justify-end cursor-pointer"
+          className="w-full max-w-[80%] flex justify-end cursor-pointer"
         >
           <Eraser className="text-gray-500 mr-2 mb-2" />
           <span>Limpar</span>
