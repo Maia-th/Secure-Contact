@@ -56,6 +56,31 @@ CREATE DATABASE SecureContact;
 ```bash
 mysql -u seu_usuario -p SecureContact < ./backup/SecureContact.sql
 ```
+### Popule o banco com dados de desenvolvimento:
+
+1. Gere os arquivos do Prisma (se ainda não fez):
+
+```bash
+npx prisma generate
+```
+
+2. Rode a seed:
+
+```bash
+npx prisma db seed
+```
+
+Isso criará dados fictícios no banco, como:
+
+* Conta Admin:
+
+  * **Email:** admin@email.com
+  * **Senha:** 123456789
+
+* Conta Comum:
+
+  * **Email:** comum@email.com
+  * **Senha:** 123456789
 
 ### Instale as dependências do projeto:
 
