@@ -17,12 +17,27 @@ const SearchNumberPage: React.FC = () => {
     status: string;
   } | null>(null);
   const [message, setMessage] = useState("");
+  const [inputError, setInputError] = useState<string | null>(null);
 
-  const validatePhone = () => {
-    if (number.trim() === "") {
+  // Validação em tempo real
+  const handleInputChange = (value: string) => {
+    setNumber(value);
+    if (value.trim() === "") {
+      setInputError("O Número Não Pode Estar Vazio.");
+    } else if (!/^\d+$/.test(value.trim())) {
+      setInputError("O Número Não Pode Conter Letras ou Caracteres Especiais.");
+    } else {
+      setInputError(null);
+    }
+    setMessage(""); // Limpa mensagem de erro de busca ao digitar
+    setResult(null);
+  };
+
+  const validatePhone = (value: string) => {
+    if (value.trim() === "") {
       setMessage("O Número Não Pode Estar Vazio.");
       return false;
-    } else if (!/^\d+$/.test(number.trim())) {
+    } else if (!/^\d+$/.test(value.trim())) {
       setMessage("O Número Não Pode Conter Letras ou Caracteres Especiais.");
       return false;
     } else {
@@ -32,7 +47,8 @@ const SearchNumberPage: React.FC = () => {
   };
 
   const handleSearch = () => {
-    if (!validatePhone()) return;
+    // Garante que não há erro no input antes de buscar
+    if (inputError || !validatePhone(number)) return;
 
     // Simulate a search result
     if (number === "12345") {
@@ -46,14 +62,15 @@ const SearchNumberPage: React.FC = () => {
     setNumber("");
     setMessage("");
     setResult(null);
+    setInputError(null);
   };
 
   return (
     <>
-    <div className="w-full max-w-[80%]">
-      <h1 className="text-2xl font-bold mb-6">Buscar Número</h1>
-    </div>
-    
+      <div className="w-full max-w-[80%]">
+        <h1 className="text-2xl font-bold mb-6">Buscar Número</h1>
+      </div>
+
       <div
         className={`mb-3 w-[80%] flex items-center border-b-2 transition-colors duration-200 ${
           isFocused ? "border-red-400" : "border-gray-300"
@@ -62,7 +79,7 @@ const SearchNumberPage: React.FC = () => {
         <input
           type="text"
           value={number}
-          onChange={(e) => setNumber(e.target.value)}
+          onChange={(e) => handleInputChange(e.target.value)}
           placeholder="Digite um Número"
           className="p-2 text-lg text-center w-full border-none outline-none rounded-lg"
           onFocus={() => setIsFocused(true)}
@@ -73,7 +90,13 @@ const SearchNumberPage: React.FC = () => {
         </button>
       </div>
 
-      {message !== "" && (
+      {inputError && (
+        <div className="flex items-center text-red-500">
+          <AlertCircle className="mr-2" />
+          <span>{inputError}</span>
+        </div>
+      )}
+      {message !== "" && !inputError && (
         <div className="flex items-center text-red-500">
           <AlertCircle className="mr-2" />
           <span>{message}</span>
@@ -81,7 +104,7 @@ const SearchNumberPage: React.FC = () => {
       )}
       {number && (
         <button
-          onClick={() => clear()}
+          onClick={clear}
           className="w-full max-w-[80%] flex justify-end cursor-pointer"
         >
           <Eraser className="text-gray-500 mr-2 mb-2" />

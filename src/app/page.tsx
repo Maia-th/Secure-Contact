@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -45,7 +46,7 @@ export default function Login() {
               placeholder="E-mail"
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="password"
@@ -71,7 +72,20 @@ export default function Login() {
                 )}
               </button>
             </div>
+            <div className="flex items-center mt-1">
+                <input
+              id="remember-me"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+              type="checkbox"
+              className="h-4 w-4 text-orange-500 rounded"
+            />
+            <label htmlFor="remember-me" className="ml-2 block text-sm">
+              Lembrar-me
+            </label>
+              </div>
           </div>
+          
           <div className="flex justify-end">
             <button
               className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer w-full"
