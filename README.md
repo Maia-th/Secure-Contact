@@ -20,15 +20,10 @@ Com essas funcionalidades, o Secure Contact proporciona uma solução eficiente 
 
 ### Demonstração do Sistema
 
-<details>
-  <summary>📹 Veja o sistema em funcionamento (Duração: 2min39s)</summary>
-  <br>
-
-  - <a href="https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio" target="_blank">
-    <img src="https://github.com/user-attachments/assets/9a4bed69-5d7f-4632-a1f5-f62864d2352e" alt="Assista ao vídeo" style="margin-top: 16px;" />
+- <a href="https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio" target="_blank">
+  
+    ![image](https://github.com/user-attachments/assets/4341073f-92a7-4461-bfeb-3aa5ad2aece7)
   </a>
-
-</details>
 
 ## Requisitos do Ambiente
 
