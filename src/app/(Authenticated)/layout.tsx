@@ -10,7 +10,7 @@ export default function AdminLayout({
   return (
     <div className="flex h-dvh w-full">
       <Sidebar />
-      <div className="flex flex-col items-center justify-center m-auto">
+      <div className="w-full flex flex-col items-center justify-center m-auto">
         {children}
       </div>
     </div>
