@@ -14,7 +14,7 @@ const SideBar: React.FC = () => {
   return (
     <>
       {/* Ajustar o Responsivo */}
-      <div className="bg-red-800 text-white h-screen px-12 py-24 hidden md:flex flex-col items-center justify-between md:items-start">
+      <div className="bg-red-600 text-white h-screen px-12 py-24 hidden md:flex flex-col items-center justify-between md:items-start">
         <div className="flex items-center justify-center w-full">
           <Image
             src="/images/rejected-white.png"
