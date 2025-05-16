@@ -56,6 +56,11 @@ CREATE DATABASE SecureContact;
 ```bash
 mysql -u seu_usuario -p SecureContact < ./backup/SecureContact.sql
 ```
+### Configure o arquivo .env:
+
+- Copie o arquivo `.env.example` e renomeie para `.env`:
+- Defina as variáveis de ambiente.
+  
 ### Popule o banco com dados de desenvolvimento:
 
 1. Gere os arquivos do Prisma (se ainda não fez):
@@ -87,11 +92,6 @@ Isso criará dados fictícios no banco, como:
 ```bash
 npm install
 ```
-
-### Configure o arquivo .env:
-
-- Copie o arquivo `.env.example` e renomeie para `.env`:
-- Defina as variáveis de ambiente.
 
 ### Inicie o projeto:
 
