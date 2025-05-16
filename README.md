@@ -79,3 +79,7 @@ npm run dev
 - [Axios - HTTP Client](https://axios-http.com/)
 - [Lucide - Icons](https://lucide.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- [Zod - Validação de dados](https://zod.dev/)
+- [bcrypt - hashing de senhas](https://www.npmjs.com/package/bcrypt)
+- [jsonwebtoken (JWT)](https://www.npmjs.com/package/jsonwebtoken)
