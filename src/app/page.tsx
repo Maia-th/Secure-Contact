@@ -97,12 +97,6 @@ export default function Login() {
           </div>
         </form>
       </div>
-      {/* Aviso de Desenvolvimento - Remover */}
-      <p className="bg-yellow-600 text-white absolute bottom-0 right-0 p-2 m-4 rounded-md text-sm md:max-w-[47%]">
-        Este projeto ainda está em desenvolvimento. Nesta versão, o backend e o
-        middleware não estão ativos. Para acessar o frontend com dados mockados,
-        basta clicar diretamente no botão Entrar.
-      </p>
     </div>
   );
 }
