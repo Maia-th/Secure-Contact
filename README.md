@@ -1,5 +1,7 @@
 # Secure Contact - Sistema de Bloqueio de Números
 
+⚠️ Este projeto está em desenvolvimento ativo. 
+
 ![image](https://github.com/user-attachments/assets/f0c4ece0-e91c-41d1-8671-5f44e3d21bdc)
 
 ## Descrição do Sistema
