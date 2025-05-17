@@ -6,7 +6,7 @@
 
 ## Descrição do Sistema
 
-O Secure Contact é um sistema desenvolvido para resolver problemas de banimento de números de WhatsApp devido ao envio repetido de mensagens. O sistema oferece as seguintes funcionalidades principais:
+O Secure Contact é um sistema desenvolvido para evitar o banimento de números comerciais no WhatsApp, causado pelo envio recorrente de mensagens a usuários que já solicitaram o cancelamento do recebimento dessas comunicações. O sistema oferece as seguintes funcionalidades principais:
 
 ### Funcionalidades
 
