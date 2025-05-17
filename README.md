@@ -1,5 +1,9 @@
 # Secure Contact - Sistema de Bloqueio de Números
 
+⚠️ Este projeto está em desenvolvimento ativo. 
+
+![image](https://github.com/user-attachments/assets/f0c4ece0-e91c-41d1-8671-5f44e3d21bdc)
+
 ## Descrição do Sistema
 
 O Secure Contact é um sistema desenvolvido para resolver problemas de banimento de números de WhatsApp devido ao envio repetido de mensagens. O sistema oferece as seguintes funcionalidades principais:
@@ -10,13 +14,18 @@ O Secure Contact é um sistema desenvolvido para resolver problemas de banimento
 
 - **Interface Gráfica Web:** Usuários podem consultar, cadastrar e descartar números bloqueados através de uma interface intuitiva e fácil de usar.
 
-- **Automação do Bloqueio:** O sistema automatiza o processo de bloqueio de números, evitando que o disparador de mensagens entre em contato com números previamente bloqueados.
-
 - **Geração de Listas Válidas:** O sistema permite a geração de listas de contatos válidos, excluindo automaticamente os números bloqueados, garantindo que apenas números permitidos sejam contatados.
 
 - **Gestão de Usuários:** Funcionalidades de gestão de usuários garantem que apenas pessoas autorizadas possam acessar e modificar a lista de números bloqueados, proporcionando maior segurança e controle.
 
 Com essas funcionalidades, o Secure Contact proporciona uma solução eficiente e automatizada para a gestão de números bloqueados, reduzindo o risco de banimentos e melhorando a organização e eficiência das operações de comunicação.
+
+### Demonstração do Sistema
+
+- <a href="https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio" target="_blank">
+  
+  [![Assista ao vídeo](https://github.com/user-attachments/assets/4341073f-92a7-4461-bfeb-3aa5ad2aece7)](https://www.youtube.com/watch?v=cgKqwlX52Pc&ab_channel=MaiaTechStudio)
+  </a>
 
 ## Requisitos do Ambiente
 
@@ -49,17 +58,42 @@ CREATE DATABASE SecureContact;
 ```bash
 mysql -u seu_usuario -p SecureContact < ./backup/SecureContact.sql
 ```
+### Configure o arquivo .env:
+
+- Copie o arquivo `.env.example` e renomeie para `.env`:
+- Defina as variáveis de ambiente.
+  
+### Popule o banco com dados de desenvolvimento:
+
+1. Gere os arquivos do Prisma (se ainda não fez):
+
+```bash
+npx prisma generate
+```
+
+2. Rode a seed:
+
+```bash
+npx prisma db seed
+```
+
+Isso criará dados fictícios no banco, como:
+
+* Conta Admin:
+
+  * **Email:** admin@email.com
+  * **Senha:** 123456789
+
+* Conta Comum:
+
+  * **Email:** comum@email.com
+  * **Senha:** 123456789
 
 ### Instale as dependências do projeto:
 
 ```bash
 npm install
 ```
-
-### Configure o arquivo .env:
-
-- Copie o arquivo `.env.example` e renomeie para `.env`:
-- Defina as variáveis de ambiente.
 
 ### Inicie o projeto:
 
@@ -72,3 +106,7 @@ npm run dev
 - [Axios - HTTP Client](https://axios-http.com/)
 - [Lucide - Icons](https://lucide.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- [Zod - Validação de dados](https://zod.dev/)
+- [bcrypt - hashing de senhas](https://www.npmjs.com/package/bcrypt)
+- [jsonwebtoken (JWT)](https://www.npmjs.com/package/jsonwebtoken)
