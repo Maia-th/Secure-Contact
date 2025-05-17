@@ -73,30 +73,36 @@ export default function Login() {
               </button>
             </div>
             <div className="flex items-center mt-1">
-                <input
-              id="remember-me"
-              checked={rememberMe}
-              onChange={(e) => setRememberMe(e.target.checked)}
-              type="checkbox"
-              className="h-4 w-4 text-orange-500 rounded"
-            />
-            <label htmlFor="remember-me" className="ml-2 block text-sm">
-              Lembrar-me
-            </label>
-              </div>
+              <input
+                id="remember-me"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                type="checkbox"
+                className="h-4 w-4 text-orange-500 rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm">
+                Lembrar-me
+              </label>
+            </div>
           </div>
-          
+
           <div className="flex justify-end">
             <button
               className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer w-full"
               type="button"
-              onClick={() => window.location.href = "/buscar-numero"}
+              onClick={() => (window.location.href = "/buscar-numero")}
             >
               Entrar
             </button>
           </div>
         </form>
       </div>
+      {/* Aviso de Desenvolvimento - Remover */}
+      <p className="bg-yellow-600 text-white absolute bottom-0 right-0 p-2 m-4 rounded-md text-sm md:max-w-[47%]">
+        Este projeto ainda está em desenvolvimento. Nesta versão, o backend e o
+        middleware não estão ativos. Para acessar o frontend com dados mockados,
+        basta clicar diretamente no botão Entrar.
+      </p>
     </div>
   );
 }
